@@ -1,0 +1,71 @@
+{%extends 'layout.html'%} {% block head%}
+
+<title>hola mundo</title>
+<link rel="stylesheet" href="../static/css/nav.css"> {% endblock%} {% block body%}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/main">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href='#'>Subir Archivo</a>
+                    </li>
+                    <li class="nav-item justify-content-end">
+                        <a class="nav-link " href="/logout">Salir</a>
+                    </li>
+
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-4 align-self-center">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/newimages" method="POST" enctype="multipart/form-data">
+
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="image" id="inputGroupFile04" aria-describedby="Buscar">
+                                <label class="custom-file-label" for="inputGroupFile04">seleccione un archivo</label>
+                            </div>
+                        </div>
+                        <div class="form-goup">
+                            <input type="text" class="form-control" placeholder="Titulo" name="titulo" id="titulo">
+                        </div>
+                        <div class="form-goup">
+                            <textarea class="form-control" placeholder="Descrpcion" name="descripcion"></textarea>
+                        </div>
+
+                        <div class="form-goup">
+                            <button type="submit" class="btn btn-success btn-block">Subir Imagen</button>
+                        </div>
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+</div>
+
+<script type="text/javascript" src="../static/js/socket.io.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/upload.js"></script>

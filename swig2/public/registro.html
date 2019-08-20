@@ -1,0 +1,62 @@
+{%extends 'layout.html'%} {% block head%}
+
+<title>{{title}}</title>
+{% endblock%} {% block body%}
+<div class="row justify-content-center">
+    <div class="col-7">
+        <div class="card">
+            <div class="card-body">
+                <form role="form" action="/registro" method="POST">
+
+                    <div class="form-group">
+                        <label for="fullName" class="control-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="control-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">Password</label>
+                        <input type="text" class="form-control" id="password" name="password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adress" class="control-label">Direccion</label>
+                        <input type="text" class="form-control" id="adress" name="adress">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="city" class="control-label">Ciudad</label>
+                        <input type="text" class="form-control" id="city" name="city">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state_id" class="control-label">Genero</label>
+                        <select class="form-control" id="genero">
+                                <option value="masculino">Hombre</option>
+                                <option value="femenino">Mujer</option>
+                                        
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zip_id" class="control-label">Codigo postal</label>
+                        <input type="text" class="form-control" id="zip" name="zip" placeholder="#####">
+                    </div>
+
+                    <div class="form-group">
+                        <!-- Btn de registro-->
+                        <button type="submit" class="btn btn-primary">Finalizar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/socket.io.js" type="text/javascrip"></script>
+<script src="./js/canvas.js" type="text/javascrip"></script>
+
+{% endblock%}
