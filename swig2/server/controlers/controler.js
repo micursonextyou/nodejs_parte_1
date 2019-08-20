@@ -6,11 +6,7 @@ exports.registro = async function(req, res, next) {
         nombre: req.body.fullName,
         email: req.body.email,
         pass: req.body.password,
-        direccion: req.body.adress,
-        ciudad: req.body.city,
-        sexo: req.body.genero,
-        zip: req.body.zip,
-        imagenes: []
+        direccion: req.body.adress     
 
 
     });
